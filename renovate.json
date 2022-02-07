@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":prConcurrentLimit10"
+  ],
+  "requireConfig": false,
+  "onboarding": false,
+  "rangeStrategy": "auto",
+  "pinDigests": true,
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "pypi"
+      ],
+      "matchPackageNames": [
+        "boto3-stubs"
+      ],
+      "allowedVersions": "<1.20.47"
+    }
+  ],
+  "setup-cfg": {
+    "enabled": true
+  }
+}
